@@ -160,3 +160,16 @@ print("report written to", rp)
 
 nbf.write(nb, "notebooks/MT_Evaluation_EN_ID.ipynb")
 print("ok")
+
+# ---- appended: export cell -------------------------------------------------
+nb2 = nbf.read("notebooks/MT_Evaluation_EN_ID.ipynb", 4)
+nb2.cells.append(nbf.v4.new_markdown_cell("## 9. Export results (to send for the final report)\nZips `results/` and `report/` so you can download them and upload them to the Claude chat."))
+nb2.cells.append(nbf.v4.new_code_cell(
+    "import shutil\n"
+    "shutil.make_archive('mt_results', 'zip', root_dir='.', base_dir=OUT)\n"
+    "print('created mt_results.zip with', OUT, '- download it from the Colab file panel (left sidebar > Files > mt_results.zip)')\n"
+    "try:\n"
+    "    from google.colab import files; files.download('mt_results.zip')\n"
+    "except Exception:\n"
+    "    pass"))
+nbf.write(nb2, "notebooks/MT_Evaluation_EN_ID.ipynb")
