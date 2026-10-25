@@ -51,3 +51,9 @@ python -m pytest -q tests
 * BLEU-n: cumulative (sacreBLEU, `max_ngram_order=n`, 13a tokenisation); individual n-gram precisions and brevity penalty are also reported.
 * chrF: character 6-grams, β=2; chrF++: adds word bigrams. TER: **lower is better**.
 * Per-sentence scores use smoothed sentence-BLEU / chrF / TER — noisy, used only to find error candidates.
+
+## Use of AI assistance
+An AI assistant (Claude, by Anthropic) was used while preparing this work, for writing the evaluation code and notebook, structuring the report and drafting parts of its text. The experiments were run by the author on Google Colab.
+
+## Author
+Mutaib Bin Mehraj Rather — NPM 250820701100010
