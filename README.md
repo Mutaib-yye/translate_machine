@@ -53,7 +53,7 @@ python -m pytest -q tests
 * Per-sentence scores use smoothed sentence-BLEU / chrF / TER — noisy, used only to find error candidates.
 
 ## Use of AI assistance
-An AI assistant (Claude, by Anthropic) was used while preparing this work, for writing the evaluation code and notebook, structuring the report and drafting parts of its text. The experiments were run by the author on Google Colab.
+AI assistance was used in preparing this project, including for its structure and layout.
 
 ## Author
 Mutaib Bin Mehraj Rather — NPM 250820701100010
